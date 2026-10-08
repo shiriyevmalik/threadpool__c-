@@ -4,8 +4,8 @@
 std::mutex print_mutex;
 
 int main() {
-    ThreadPool pool(3);
-    for (int i=1; i<=8; i++) {
+    ThreadPool pool(4);
+    for (int i=1; i<=13; i++) {
         pool.enqueue([i]() {
             {
                 std::lock_guard<std::mutex> lock(print_mutex);
