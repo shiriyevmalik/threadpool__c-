@@ -18,7 +18,7 @@ int main() {
     std::cout << TOTAL << " integers exists\n";
 
     std::vector<int> numbers(TOTAL);
-    for (size_t i=0; i<TOTAL; i++) numbers[i]=static_cast<int>((i%100)+1);
+    for (size_t i=0; i<TOTAL; i++) numbers[i]=static_cast<int>(i+1);
     auto start_time = std::chrono::high_resolution_clock::now();
     long long sequential_sum = sum_chunk(numbers, 0, TOTAL);
 
