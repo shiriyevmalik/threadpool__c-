@@ -16,7 +16,7 @@ int main() {
     const size_t TOTAL = 10'000'000;
     std::cout << TOTAL << " integers exists\n";
 
-    std::vector<int> numbers(TOTAL_ELEMENTS);
+    std::vector<int> numbers(TOTAL);
     for (size_t i=0; i<TOTAL; i++) numbers[i]=(i%100)+1;
     auto start_time = std::chrono::high_resolution_clock::now();
     long long sequential_sum = sum_chunk(numbers, 0, TOTAL);
